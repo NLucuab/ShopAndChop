@@ -5,16 +5,32 @@
 //  Created by Nyckolle Grace T. Lucuab on 8/8/21.
 //
 
-import SwiftUI
+import UIKit
+import Firebase
 
-struct LoginViewController: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBAction func registerPressed(_sender: UIButton) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    
+                }
+                
+            }
+
+        }
     }
 }
 
-struct LoginViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginViewController()
-    }
-}
+    
+    
+    
+
+
