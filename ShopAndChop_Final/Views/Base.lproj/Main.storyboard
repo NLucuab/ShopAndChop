@@ -25,12 +25,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" name="BrandBlue"/>
+                                    <color key="titleColor" red="0.1960784314" green="0.64705882349999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerButtonTapped:" destination="hlt-Fm-78c" eventType="touchUpInside" id="2p3-cr-n97"/>
-                                    <segue destination="PUP-MS-pPX" kind="show" identifier="GotToRegister" id="zaI-Hb-uGX"/>
+                                    <action selector="registerButtonTapped:" destination="hlt-Fm-78c" eventType="touchUpInside" id="F08-XR-t7e"/>
+                                    <segue destination="PUP-MS-pPX" kind="show" id="I4I-aU-pKI"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dark_logo_transparent_background" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-2w-qkD">
@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTapped:" destination="hlt-Fm-78c" eventType="touchUpInside" id="Pzw-Kh-nCJ"/>
+                                    <action selector="loginButtonTapped:" destination="hlt-Fm-78c" eventType="touchUpInside" id="se2-AY-unI"/>
                                     <segue destination="GCS-Mi-8hC" kind="show" id="Yqc-9H-NXM"/>
                                 </connections>
                             </button>
@@ -110,6 +110,10 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mT-qK-6W7" userLabel="PasswordView">
                                 <rect key="frame" x="0.0" y="165" width="414" height="242"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="uyM-MU-3K5">
+                                        <rect key="frame" x="0.0" y="37" width="414" height="137"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYW-5R-ora">
                                         <rect key="frame" x="0.0" y="123" width="414" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -118,16 +122,10 @@
                                             <color key="titleColor" red="0.19607843137254902" green="0.6470588235294118" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="registerTapped:" destination="PUP-MS-pPX" eventType="touchUpInside" id="8ua-e2-NGq"/>
+                                            <action selector="registerButtonTapped:" destination="PUP-MS-pPX" eventType="touchUpInside" id="WoR-Mo-OAl"/>
                                             <segue destination="xyx-sm-Vby" kind="show" identifier="RegisterToStart" id="xez-o2-sau"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egz-um-wjH">
-                                        <rect key="frame" x="49" y="50" width="317" height="45"/>
-                                        <color key="textColor" name="BrandBlue"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cp-gL-an7">
                                         <rect key="frame" x="77" y="182" width="261" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,20 +133,16 @@
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="vap-M2-Tuh">
-                                        <rect key="frame" x="0.0" y="21" width="414" height="137"/>
-                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yyl-v0-gjN" userLabel="Password">
+                                        <rect key="frame" x="47" y="52" width="320" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" name="BrandBlue"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="right" secondItem="Egz-um-wjH" secondAttribute="right" constant="48" id="2h4-ew-X9v"/>
-                                    <constraint firstItem="vap-M2-Tuh" firstAttribute="leading" secondItem="0mT-qK-6W7" secondAttribute="leading" id="TPk-nq-euM"/>
-                                    <constraint firstAttribute="bottom" secondItem="Egz-um-wjH" secondAttribute="bottom" constant="82" id="WOd-tt-aok"/>
-                                    <constraint firstAttribute="bottom" secondItem="vap-M2-Tuh" secondAttribute="bottom" constant="20" id="dCk-HG-bXn"/>
-                                    <constraint firstItem="Egz-um-wjH" firstAttribute="top" secondItem="0mT-qK-6W7" secondAttribute="top" constant="50" id="eA9-sO-dhf"/>
-                                    <constraint firstAttribute="trailing" secondItem="vap-M2-Tuh" secondAttribute="trailing" id="nmq-P4-10e"/>
                                     <constraint firstAttribute="height" constant="177" id="nqO-Sa-54f"/>
-                                    <constraint firstItem="vap-M2-Tuh" firstAttribute="top" secondItem="0mT-qK-6W7" secondAttribute="top" constant="20" id="rIA-52-6Yx"/>
-                                    <constraint firstItem="Egz-um-wjH" firstAttribute="left" secondItem="0mT-qK-6W7" secondAttribute="left" constant="49" id="zuy-TX-Jwy"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -165,10 +159,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="XvR-P4-qhx"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="jfJ-Vy-2pP" id="59R-u5-YSm"/>
-                        <outlet property="errorLabel" destination="7Cp-gL-an7" id="Mau-n5-x9e"/>
-                        <outlet property="passwordTextField" destination="Egz-um-wjH" id="2NQ-1V-veJ"/>
-                        <outlet property="registerButton" destination="zYW-5R-ora" id="LiJ-sc-NS9"/>
+                        <outlet property="emailTextField" destination="jfJ-Vy-2pP" id="bYQ-en-Fdg"/>
+                        <outlet property="errorLabel" destination="7Cp-gL-an7" id="TKK-tk-aOv"/>
+                        <outlet property="passwordTextField" destination="Yyl-v0-gjN" id="Cb9-60-uLY"/>
+                        <outlet property="registerButton" destination="zYW-5R-ora" id="TJU-F2-Dgo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2j-Qp-lLu" sceneMemberID="firstResponder"/>
@@ -203,7 +197,7 @@
         <!--Login View Controller-->
         <scene sceneID="Mea-L0-UBv">
             <objects>
-                <viewController id="GCS-Mi-8hC" customClass="LoginViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GCS-Mi-8hC" customClass="LoginViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlu-hh-C6A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

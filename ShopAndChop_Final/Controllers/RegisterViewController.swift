@@ -13,8 +13,11 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var emailTextField: UITextField!
     
+
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -54,9 +57,11 @@ class RegisterViewController: UIViewController {
         return nil
     }
     
-    @IBAction func registerTapped(_ sender: Any) {
-        
-        //Validate the fields
+    
+
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+    
+     //Validate the fields
         let error = validateFields()
         
         if error != nil {
