@@ -10,27 +10,21 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func registerPressed(_sender: UIButton) {
-        
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e)
-                } else {
-                    
-                }
-                
-            }
-
-        }
+    @IBOutlet weak var emailTextView: UITextField!
+    
+    @IBOutlet weak var passwordTextView: UITextField!
+    
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
+    
+    @IBAction func loginTapped(_ sender: Any) {
+    }
+    
 }
-
-    
-    
-    
-
 
