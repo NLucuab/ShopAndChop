@@ -41,11 +41,39 @@ class RegisterViewController: UIViewController {
             return "Please fill in all fields"
         }
         // Check if password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            // Password isn't secure enough
+            return "Please make sure your password is at least 8 characters and contains a special character and a number."
+        }
         
         return nil
     }
     
     @IBAction func registerTapped(_ sender: Any) {
+        
+        //Validate the fields
+        let error = validateFields()
+        
+        if error != nil {
+            // There's something wrong with the fields, show error message
+            showError(error!)
+        } else {
+            
+            // Create the user
+            
+            
+            //Transition to the home screen
+            
+        }
+
+        
+    }
+    
+    func showError(_ message:String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
 }
     
