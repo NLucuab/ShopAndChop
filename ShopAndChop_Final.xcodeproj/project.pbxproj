@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		432082D726C08B6300E86F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432082D626C08B6300E86F13 /* GoogleService-Info.plist */; };
 		432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082D926C0EFC000E86F13 /* Utilities.swift */; };
+		432082DC26C1150500E86F13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DB26C1150500E86F13 /* Constants.swift */; };
+		432082DE26C1174C00E86F13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DD26C1174C00E86F13 /* HomeViewController.swift */; };
 		43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779426C065B0006DDAF4 /* AppDelegate.swift */; };
 		43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779626C065B0006DDAF4 /* SceneDelegate.swift */; };
 		43B1779926C065B0006DDAF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779826C065B0006DDAF4 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		40EBDA2C9C7E9D3B1D4DEF16 /* Pods-ShopAndChop_Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAndChop_Final.release.xcconfig"; path = "Target Support Files/Pods-ShopAndChop_Final/Pods-ShopAndChop_Final.release.xcconfig"; sourceTree = "<group>"; };
 		432082D626C08B6300E86F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		432082D926C0EFC000E86F13 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		432082DB26C1150500E86F13 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		432082DD26C1174C00E86F13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		43B1779126C065B0006DDAF4 /* ShopAndChop_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAndChop_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1779426C065B0006DDAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B1779626C065B0006DDAF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +110,11 @@
 		43E83AEC26C07061004010F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				432082DB26C1150500E86F13 /* Constants.swift */,
 				43E83AFB26C07A50004010F7 /* RegisterViewController.swift */,
 				43E83AFD26C07A81004010F7 /* WelcomeViewController.swift */,
 				43E83AFF26C07A8D004010F7 /* LoginViewController.swift */,
+				432082DD26C1174C00E86F13 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 				432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */,
 				43E83AFE26C07A81004010F7 /* WelcomeViewController.swift in Sources */,
 				43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */,
+				432082DE26C1174C00E86F13 /* HomeViewController.swift in Sources */,
 				43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */,
 				43E83AFC26C07A50004010F7 /* RegisterViewController.swift in Sources */,
+				432082DC26C1150500E86F13 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

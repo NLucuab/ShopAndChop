@@ -7,6 +7,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+
+
 
 class RegisterViewController: UIViewController {
     
@@ -61,10 +64,33 @@ class RegisterViewController: UIViewController {
             showError(error!)
         } else {
             
+            // Create cleaned version of the data
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             // Create the user
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                //Check for errors
+                if err != nil {
+                    //There was an error creating the user
+                    self.showError("Error creating user")
+                } else {
+                    
+                    // User was created successfully, now store the email and password
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["email":email, "password":password, "uid":result!.user.uid]) { (error) in
+                        if error != nil {
+                            // Show error message
+                            self.showError("Error saving user data")
+                        }
+                    }
+                    
+                    //Transition to the home screen
+                    self.transitionToHome()
+                }
+            }
             
-            
-            //Transition to the home screen
             
         }
 
@@ -74,6 +100,13 @@ class RegisterViewController: UIViewController {
     func showError(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
+    }
+    
+    func transitionToHome() {
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
 }
     
