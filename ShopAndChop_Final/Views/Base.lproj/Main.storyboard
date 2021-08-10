@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="0.1960784314" green="0.64705882349999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PUP-MS-pPX" kind="show" identifier="toRegister" id="RCb-Kv-iQD"/>
+                                    <segue destination="PUP-MS-pPX" kind="show" id="ybw-hh-hWB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9V-d4-Xhj">
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-QR-ZWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7208.6956521739139" y="199.55357142857142"/>
+            <point key="canvasLocation" x="6713" y="197"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="Mea-L0-UBv">
@@ -251,23 +251,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltd-uY-KBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3344.9275362318845" y="251.78571428571428"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="CWm-BE-aUa">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KCP-4r-mb1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICE-gz-9cj">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="xyx-sm-Vby" kind="relationship" relationship="viewControllers" id="jPk-ds-5pB"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5yo-JX-kqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6298.5507246376819" y="199.55357142857142"/>
         </scene>
     </scenes>
     <resources>
