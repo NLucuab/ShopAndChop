@@ -14,10 +14,9 @@ import FirebaseAuth
 class RegisterViewController: UIViewController {
     
     
-    
     @IBOutlet weak var emailTextField: UITextField!
     
-
+    
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -26,6 +25,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,8 @@ class RegisterViewController: UIViewController {
     
     
 
-    @IBAction func registerButtonTapped(_ sender: UIButton) {
+
+    @IBAction func registerButtonTapped(_ sender: Any) {
     
      //Validate the fields
         let error = validateFields()
@@ -108,9 +109,9 @@ class RegisterViewController: UIViewController {
     }
     
     func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        let HomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.HomeViewController) as? HomeViewController
         
-        view.window?.rootViewController = homeViewController
+        view.window?.rootViewController = HomeViewController
         view.window?.makeKeyAndVisible()
     }
 }
