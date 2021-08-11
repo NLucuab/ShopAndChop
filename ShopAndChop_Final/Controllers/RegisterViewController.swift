@@ -103,6 +103,7 @@ class RegisterViewController: UIViewController {
         
     }
     
+    
     func showError(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1

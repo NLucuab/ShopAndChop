@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class ShoppingListViewController: UIViewController, UITableViewDataSource {
     
@@ -35,22 +37,36 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
             field.placeholder = "Enter item..."
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { [](_) in
+        alert.addAction(UIAlertAction(title: "Done", style: .default) { [](_) in
             if let field = alert.textFields?.first {
+                // new stuff might delete?
                 if let text = field.text, !text.isEmpty {
                     // Enter new shopping list item
-                    DispatchQueue.main.async {
-                        var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
-                        currentItems.append(text)
-                        UserDefaults.standard.setValue(currentItems, forKey: "items")
-                        self.items.append(text)
-                        self.table.reloadData()
+                    guard let text = alert.textFields?.first?.text else { return }
+                    self.items.append(text)
+                    self.table.reloadData()
+                    let db = Firestore.firestore()
+                    
+                    db.collection("groceryItems").addDocument(data: ["item" : text]) {
+                        (error) in
+                        if error != nil {
+                            self.showError("Error saving user data")
+                        }
                     }
+                    
+                    
+//                    DispatchQueue.main.async {
+//                        var currentItems = UserDefaults.standard.stringArray(forKey: "items") ?? []
+//                        currentItems.append(text)
+//                        UserDefaults.standard.setValue(currentItems, forKey: "items")
+//                        self.items.append(text)
+//                        self.table.reloadData()
+//                    }
                     
                 }
             }
             
-        }))
+        })
         
         present(alert, animated: true)
     }
@@ -78,10 +94,15 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
 //        return [deleteAction]
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            items.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+        guard editingStyle == .delete else { return }
+        items.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
+    
+    func showError(_ message: String) {
+        print(message)
+    }
     }
     
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -94,7 +115,7 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
 //    }
 
     
-    }
+    
     
 
 
