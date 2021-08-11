@@ -11,6 +11,8 @@
 		432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082D926C0EFC000E86F13 /* Utilities.swift */; };
 		432082DC26C1150500E86F13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DB26C1150500E86F13 /* Constants.swift */; };
 		432082DE26C1174C00E86F13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DD26C1174C00E86F13 /* HomeViewController.swift */; };
+		43AC25B526C33BB1005299AE /* flavor_icons in Resources */ = {isa = PBXBuildFile; fileRef = 43AC25B426C33BB1005299AE /* flavor_icons */; };
+		43AC25B726C342A6005299AE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC25B626C342A6005299AE /* ShoppingListViewController.swift */; };
 		43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779426C065B0006DDAF4 /* AppDelegate.swift */; };
 		43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779626C065B0006DDAF4 /* SceneDelegate.swift */; };
 		43B1779926C065B0006DDAF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779826C065B0006DDAF4 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		432082D926C0EFC000E86F13 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		432082DB26C1150500E86F13 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		432082DD26C1174C00E86F13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		43AC25B426C33BB1005299AE /* flavor_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flavor_icons; sourceTree = "<group>"; };
+		43AC25B626C342A6005299AE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		43B1779126C065B0006DDAF4 /* ShopAndChop_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAndChop_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1779426C065B0006DDAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B1779626C065B0006DDAF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				43B1779626C065B0006DDAF4 /* SceneDelegate.swift */,
 				43B1779826C065B0006DDAF4 /* ViewController.swift */,
 				43B1779D26C065B2006DDAF4 /* Assets.xcassets */,
+				43AC25B426C33BB1005299AE /* flavor_icons */,
 				43B1779F26C065B2006DDAF4 /* LaunchScreen.storyboard */,
 				432082D626C08B6300E86F13 /* GoogleService-Info.plist */,
 				43B177A226C065B2006DDAF4 /* Info.plist */,
@@ -115,6 +120,7 @@
 				43E83AFD26C07A81004010F7 /* WelcomeViewController.swift */,
 				43E83AFF26C07A8D004010F7 /* LoginViewController.swift */,
 				432082DD26C1174C00E86F13 /* HomeViewController.swift */,
+				43AC25B626C342A6005299AE /* ShoppingListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B177A126C065B2006DDAF4 /* LaunchScreen.storyboard in Resources */,
+				43AC25B526C33BB1005299AE /* flavor_icons in Resources */,
 				432082D726C08B6300E86F13 /* GoogleService-Info.plist in Resources */,
 				43B1779E26C065B2006DDAF4 /* Assets.xcassets in Resources */,
 				43B1779C26C065B0006DDAF4 /* Main.storyboard in Resources */,
@@ -253,6 +260,7 @@
 			files = (
 				43E83B0026C07A8D004010F7 /* LoginViewController.swift in Sources */,
 				43B1779926C065B0006DDAF4 /* ViewController.swift in Sources */,
+				43AC25B726C342A6005299AE /* ShoppingListViewController.swift in Sources */,
 				432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */,
 				43E83AFE26C07A81004010F7 /* WelcomeViewController.swift in Sources */,
 				43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */,
