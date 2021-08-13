@@ -107,6 +107,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZi-cK-6d6">
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -144,10 +145,9 @@
         <!--HomeViewController-->
         <scene sceneID="0b5-Ez-27v">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-QR-ZWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HomeVC" title="HomeViewController" id="xyx-sm-Vby" customClass="HomeViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rh5-Km-zye">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-Xw-Nye">
@@ -162,7 +162,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to tab view controller"/>
                                 <connections>
-                                    <segue destination="lRu-FW-zZF" kind="show" id="5a0-Wr-Kxe"/>
+                                    <segue destination="lRu-FW-zZF" kind="show" id="TFL-JW-gTO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,6 +172,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="oNC-Kz-wRn"/>
                     <navigationItem key="navigationItem" id="49Z-Rb-Ctn"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-QR-ZWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6368" y="175"/>
         </scene>
@@ -186,14 +187,30 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xyx-sm-Vby" kind="relationship" relationship="viewControllers" id="UAf-lW-5XJ"/>
-                        <segue destination="FgP-o6-1qF" kind="relationship" relationship="viewControllers" id="ExN-b4-c1Q"/>
-                        <segue destination="u9Z-kg-6NJ" kind="relationship" relationship="viewControllers" id="RsU-ti-MDo"/>
+                        <segue destination="xyx-sm-Vby" kind="relationship" relationship="viewControllers" id="RD4-4B-JBq"/>
+                        <segue destination="FgP-o6-1qF" kind="relationship" relationship="viewControllers" id="vVo-qL-pao"/>
+                        <segue destination="u9Z-kg-6NJ" kind="relationship" relationship="viewControllers" id="hfU-bV-4l7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubi-tz-rXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7080" y="-707"/>
+            <point key="canvasLocation" x="7151" y="-707"/>
+        </scene>
+        <!--Shopping List-->
+        <scene sceneID="mSR-g9-gkl">
+            <objects>
+                <viewController id="vwB-OJ-NvW" customClass="ListViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhm-w0-oCp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TNe-8I-HeE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping List" id="r9o-ty-zfz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Y9-Tvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9045" y="-707"/>
         </scene>
         <!--CategoriesTableViewController-->
         <scene sceneID="Ssp-9K-WJq">
@@ -229,7 +246,7 @@
             <objects>
                 <viewController storyboardIdentifier="ShoppingListVC" title="ShoppingListViewController" id="e4m-IG-0Fj" customClass="ShoppingListViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ufo-Xu-yu4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="c2N-N6-oam"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -337,7 +354,7 @@
                     <tabBarItem key="tabBarItem" title="Shopping List" image="cart.fill" catalog="system" selectedImage="cart.fill" id="IbV-nF-6uP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Gro-B9-4gB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -349,9 +366,27 @@
             </objects>
             <point key="canvasLocation" x="7872.4637681159429" y="178.79464285714286"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Scw-6h-lFL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EiO-8g-J3k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="taY-n9-gbx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vwB-OJ-NvW" kind="relationship" relationship="rootViewController" id="F7e-AQ-nil"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iff-FK-w50" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7996" y="-707"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5a0-Wr-Kxe"/>
+        <segue reference="RD4-4B-JBq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="black_logo_transparent_background" width="3340" height="3400"/>

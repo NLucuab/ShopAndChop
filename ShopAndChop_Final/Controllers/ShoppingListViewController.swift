@@ -42,7 +42,7 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
                 // new stuff might delete?
                 if let text = field.text, !text.isEmpty {
                     // Enter new shopping list item
-                    guard let text = alert.textFields?.first?.text else { return }
+//                    guard let text = alert.textFields?.first?.text else { return }
                     self.items.append(text)
                     self.table.reloadData()
                     let db = Firestore.firestore()

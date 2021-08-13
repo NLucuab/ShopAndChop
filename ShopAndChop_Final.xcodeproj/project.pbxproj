@@ -11,6 +11,7 @@
 		432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082D926C0EFC000E86F13 /* Utilities.swift */; };
 		432082DC26C1150500E86F13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DB26C1150500E86F13 /* Constants.swift */; };
 		432082DE26C1174C00E86F13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DD26C1174C00E86F13 /* HomeViewController.swift */; };
+		4388C3B926C5E5DD00001D68 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388C3B826C5E5DD00001D68 /* ListViewController.swift */; };
 		43AC25B726C342A6005299AE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC25B626C342A6005299AE /* ShoppingListViewController.swift */; };
 		43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779426C065B0006DDAF4 /* AppDelegate.swift */; };
 		43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1779626C065B0006DDAF4 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 		432082D926C0EFC000E86F13 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		432082DB26C1150500E86F13 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		432082DD26C1174C00E86F13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4388C3B826C5E5DD00001D68 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		43AC25B626C342A6005299AE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		43B1779126C065B0006DDAF4 /* ShopAndChop_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAndChop_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1779426C065B0006DDAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				43E83AFF26C07A8D004010F7 /* LoginViewController.swift */,
 				432082DD26C1174C00E86F13 /* HomeViewController.swift */,
 				43AC25B626C342A6005299AE /* ShoppingListViewController.swift */,
+				4388C3B826C5E5DD00001D68 /* ListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				43AC25B726C342A6005299AE /* ShoppingListViewController.swift in Sources */,
 				432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */,
 				43E83AFE26C07A81004010F7 /* WelcomeViewController.swift in Sources */,
+				4388C3B926C5E5DD00001D68 /* ListViewController.swift in Sources */,
 				43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */,
 				432082DE26C1174C00E86F13 /* HomeViewController.swift in Sources */,
 				43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */,
