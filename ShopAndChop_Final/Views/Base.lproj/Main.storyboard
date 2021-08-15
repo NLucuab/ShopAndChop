@@ -148,47 +148,16 @@
             </objects>
             <point key="canvasLocation" x="5317.3913043478269" y="-72.991071428571431"/>
         </scene>
-        <!--HomeViewController-->
-        <scene sceneID="0b5-Ez-27v">
-            <objects>
-                <viewController storyboardIdentifier="HomeVC" title="HomeViewController" id="xyx-sm-Vby" customClass="HomeViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rh5-Km-zye">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VK0-l3-UlD">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Gkg-eg-3r4"/>
-                        <color key="backgroundColor" red="0.76796373029999998" green="1" blue="0.88218147670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="VK0-l3-UlD" firstAttribute="leading" secondItem="Gkg-eg-3r4" secondAttribute="leading" id="1aL-Y9-gVw"/>
-                            <constraint firstItem="VK0-l3-UlD" firstAttribute="bottom" secondItem="Gkg-eg-3r4" secondAttribute="bottom" id="6Xx-l7-omX"/>
-                            <constraint firstItem="VK0-l3-UlD" firstAttribute="trailing" secondItem="Gkg-eg-3r4" secondAttribute="trailing" id="aTA-95-Zv3"/>
-                            <constraint firstItem="VK0-l3-UlD" firstAttribute="top" secondItem="Gkg-eg-3r4" secondAttribute="top" id="diq-lJ-D8t"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Categories" id="qWp-1Z-M89"/>
-                    <connections>
-                        <outlet property="CategoryTableView" destination="VK0-l3-UlD" id="3z0-z8-l3u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-QR-ZWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8201.4492753623199" y="163.39285714285714"/>
-        </scene>
         <!--ItemListViewController-->
         <scene sceneID="Kgc-1a-KbA">
             <objects>
-                <viewController storyboardIdentifier="ItemListVC" title="ItemListViewController" id="BLY-eo-eEP" customClass="ItemListViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemListVC" title="ItemListViewController" id="BLY-eo-eEP" customClass="ItemListVC" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mh3-eL-ABf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-DD-nYX">
-                                <rect key="frame" x="20" y="121" width="374" height="74"/>
+                                <rect key="frame" x="20" y="100" width="374" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -197,15 +166,15 @@
                         <viewLayoutGuide key="safeArea" id="xHs-AG-ugj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="SMh-DD-nYX" firstAttribute="top" secondItem="Mh3-eL-ABf" secondAttribute="top" constant="100" id="Kfs-tE-C4r"/>
+                            <constraint firstItem="xHs-AG-ugj" firstAttribute="bottom" secondItem="SMh-DD-nYX" secondAttribute="bottom" constant="700" id="egm-j2-nXm"/>
                             <constraint firstItem="SMh-DD-nYX" firstAttribute="leading" secondItem="xHs-AG-ugj" secondAttribute="leading" constant="20" id="fBO-OW-4q9"/>
-                            <constraint firstItem="xHs-AG-ugj" firstAttribute="bottom" secondItem="SMh-DD-nYX" secondAttribute="bottom" constant="667" id="fnF-9a-Sfp"/>
-                            <constraint firstItem="SMh-DD-nYX" firstAttribute="top" secondItem="xHs-AG-ugj" secondAttribute="top" constant="77" id="lRL-ct-wyd"/>
                             <constraint firstItem="xHs-AG-ugj" firstAttribute="trailing" secondItem="SMh-DD-nYX" secondAttribute="trailing" constant="20" id="ois-DG-xEC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Item List" id="Qhl-xN-jbF"/>
                     <connections>
-                        <outlet property="CategoryLabel" destination="SMh-DD-nYX" id="Zdl-Af-JRT"/>
+                        <outlet property="CategoryLabel" destination="SMh-DD-nYX" id="kX3-Kt-prF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRo-VB-TlY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -430,12 +399,45 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xyx-sm-Vby" kind="relationship" relationship="rootViewController" id="0g0-hR-zue"/>
+                        <segue destination="5nd-db-dbf" kind="relationship" relationship="rootViewController" id="u8q-tm-Edu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XA8-1t-64v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7289.8550724637689" y="162.72321428571428"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="oqC-jp-ZsT">
+            <objects>
+                <tableViewController storyboardIdentifier="HomeVC" title="HomeViewController" id="5nd-db-dbf" customClass="HomeViewController" customModule="ShopAndChop_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FH4-KH-S0K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GuN-QV-2W6">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GuN-QV-2W6" id="bhF-al-Dvc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5nd-db-dbf" id="k11-6e-Jg5"/>
+                            <outlet property="delegate" destination="5nd-db-dbf" id="CzK-Pv-1Dm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vps-Sd-U7j"/>
+                    <connections>
+                        <outlet property="CategoryTableView" destination="FH4-KH-S0K" id="2qU-ZH-fvM"/>
+                        <segue destination="BLY-eo-eEP" kind="show" identifier="ToItemListVC" id="cGV-ld-0vj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bU-7G-XZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8181" y="165"/>
         </scene>
     </scenes>
     <resources>

@@ -7,10 +7,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UITableViewController {
+//    var categoryList = [CategoryForView]()
     
     
-    @IBOutlet weak var CategoryTableView: UITableView!
+    
+    @IBOutlet var CategoryTableView: UITableView!
+    
     
     
     override func viewDidLoad() {
@@ -33,15 +36,19 @@ class HomeViewController: UIViewController {
                       "Personal Care",
                       "Other"]
     
-
+    
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ToItemListVC", sender: self)
+        print(indexPath)
+    }
 }
 
-extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomeViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryNameArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CategoryTableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         let categoryName = categoryNameArray[indexPath.row]
         
@@ -57,4 +64,23 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let itemListViewController = segue.destination as! ItemListVC
+        
+        
+        itemListViewController.receivedData = "Category Name goes here!"
+    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let category = self.categoryNameArray[indexPath.row]
+//        let categoryItemListVC = CategoryItemListVC()
+////        CategoryItemListVC.category = category
+//        // Connect CategoryItemListVC when category tapped?
+//        self.present(categoryItemListVC, animated: true)
+//    }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
 }
