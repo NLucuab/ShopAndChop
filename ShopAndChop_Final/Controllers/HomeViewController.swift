@@ -7,10 +7,20 @@
 
 import UIKit
 
-class HomeViewController:
-
+class HomeViewController: UIViewController {
     
-    var imageArray = ["Beverages",
+    
+    @IBOutlet weak var CategoryTableView: UITableView!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        CategoryTableView.dataSource = self
+        CategoryTableView.register(CategoryCell.self, forCellReuseIdentifier: "cellid")
+    
+    }
+    
+    var categoryNameArray = ["Beverages",
                       "Bakery",
                       "Canned Goods",
                       "Dairy",
@@ -23,11 +33,21 @@ class HomeViewController:
                       "Personal Care",
                       "Other"]
     
-    
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+}
 
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryNameArray.count
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = CategoryTableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
+        let categoryName = categoryNameArray[indexPath.row]
+        cell.textLabel?.text = categoryName
+        // how to write out logic that will let me add to imageArray dynamically via an add button in the VC?
+        return cell
+    }
+    
+    
+}
