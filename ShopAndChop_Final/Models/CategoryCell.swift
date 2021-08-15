@@ -10,6 +10,19 @@ import UIKit
 class CategoryCell: UITableViewCell {
     var safeArea: UILayoutGuide!
     let imageIV = UIImageView()
+    let nameLabel = UILabel()
+    var categoryNameArray = ["Beverages",
+                              "Bakery",
+                              "Canned Goods",
+                              "Dairy",
+                              "Dry Goods",
+                              "Frozen Foods",
+                              "Meat",
+                              "Produce",
+                              "Cleaning Products",
+                              "Paper Products",
+                              "Personal Care",
+                              "Other"]
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -24,6 +37,7 @@ class CategoryCell: UITableViewCell {
     func setupView() {
         safeArea = layoutMarginsGuide
         setupImageView()
+        setupNameLabel()
     
     }
     
@@ -35,7 +49,17 @@ class CategoryCell: UITableViewCell {
         imageIV.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         imageIV.widthAnchor.constraint(equalToConstant: 40).isActive = true
         imageIV.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//        imageIV.image = UIImage(named: categoryNameArray[indexPath.row])<< this doesn't work 
         
+        
+    }
+    func setupNameLabel() {
+        addSubview(nameLabel)
+        
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.leadingAnchor.constraint(equalTo: imageIV.trailingAnchor, constant: 5).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+        nameLabel.font = UIFont(name: "BebasNeue", size: 25)
         
     }
     

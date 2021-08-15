@@ -44,7 +44,14 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CategoryTableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         let categoryName = categoryNameArray[indexPath.row]
-        cell.textLabel?.text = categoryName
+        
+        
+        guard let categoryCell = cell as? CategoryCell else {
+            return cell
+        }
+        categoryCell.nameLabel.text = categoryName
+        categoryCell.imageIV.image = UIImage(named: categoryNameArray[indexPath.row])
+        
         // how to write out logic that will let me add to imageArray dynamically via an add button in the VC?
         return cell
     }
