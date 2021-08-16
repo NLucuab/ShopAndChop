@@ -11,7 +11,6 @@ class HomeViewController: UITableViewController {
 //    var categoryList = [CategoryForView]()
     
     
-    
     @IBOutlet var CategoryTableView: UITableView!
     
     
@@ -37,19 +36,6 @@ class HomeViewController: UITableViewController {
                       "Paper Products",
                       "Personal Care",
                       "Other"]
-    
-    
-    var Beverages = "Beverages"
-    var CannedGoods = "Canned Goods"
-    var Dairy = "Dairy"
-    var DryGoods = "Dry Goods"
-    var FrozenFoods = "Frozen Foods"
-    var Meat = "Meat"
-    var Produce = "Produce"
-    var CleaningProducts = "Cleaning Products"
-    var PaperProducts = "Paper Products"
-    var PersonalCare = "Personal Care"
-    var Other = "Other"
     
        
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

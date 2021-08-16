@@ -34,7 +34,8 @@ class ItemListVC: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             CategoryLabel?.text = receivedData
-            view.backgroundColor = .green
+            CategoryLabel.font = UIFont(name: "BebasNeue", size: 25)
+            
         }
         
     
