@@ -23,6 +23,8 @@ class HomeViewController: UITableViewController {
     
     }
     
+    var selectedCategory: String = ""
+    
     var categoryNameArray = ["Beverages",
                       "Bakery",
                       "Canned Goods",
@@ -37,9 +39,23 @@ class HomeViewController: UITableViewController {
                       "Other"]
     
     
+    var Beverages = "Beverages"
+    var CannedGoods = "Canned Goods"
+    var Dairy = "Dairy"
+    var DryGoods = "Dry Goods"
+    var FrozenFoods = "Frozen Foods"
+    var Meat = "Meat"
+    var Produce = "Produce"
+    var CleaningProducts = "Cleaning Products"
+    var PaperProducts = "Paper Products"
+    var PersonalCare = "Personal Care"
+    var Other = "Other"
+    
+       
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ToItemListVC", sender: self)
-        print(indexPath)
+    self.selectedCategory = categoryNameArray[indexPath.row]
+    self.performSegue(withIdentifier: "ToItemListVC", sender: self)
+    print(indexPath)
     }
 }
 
@@ -51,6 +67,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CategoryTableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         let categoryName = categoryNameArray[indexPath.row]
+        
         
         
         guard let categoryCell = cell as? CategoryCell else {
@@ -66,10 +83,13 @@ extension HomeViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let itemListViewController = segue.destination as! ItemListVC
+        itemListViewController.receivedData = self.selectedCategory
         
         
-        itemListViewController.receivedData = "Category Name goes here!"
+        // reset selectedCategory after useage
+//            ItemListVC.receivedData = categoryNameArray[indexPath.row]
     }
+//    self.selectedCategory = ""
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let category = self.categoryNameArray[indexPath.row]
