@@ -15,6 +15,7 @@ class HomeViewController: UITableViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         CategoryTableView.dataSource = self
@@ -61,6 +62,7 @@ extension HomeViewController {
         }
         categoryCell.nameLabel.text = categoryName
         categoryCell.imageIV.image = UIImage(named: categoryNameArray[indexPath.row])
+        cell.backgroundColor = .clear
         
         // how to write out logic that will let me add to imageArray dynamically via an add button in the VC?
         return cell

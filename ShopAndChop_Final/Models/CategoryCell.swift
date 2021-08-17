@@ -59,7 +59,8 @@ class CategoryCell: UITableViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.leadingAnchor.constraint(equalTo: imageIV.trailingAnchor, constant: 5).isActive = true
         nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
-        nameLabel.font = UIFont(name: "BebasNeue", size: 25)
+        nameLabel.font = UIFont(name: "BebasNeue", size: 30)
+        nameLabel.backgroundColor = .clear
         
     }
     
