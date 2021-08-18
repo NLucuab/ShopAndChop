@@ -9,23 +9,26 @@ import Firebase
 import FirebaseFirestore
 
 
-class ItemListVC: UIViewController, UITableViewDataSource {
+class ItemListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @objc func tableView(_ itemTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ itemTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
 //
-    @objc(tableView:cellForRowAtIndexPath:) func tableView(_ itemTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ itemTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
         return cell
     }
     
-//    private let table: UITableView = {
-//        let table = UITableView()
-//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//        return table
-//    }()
+    func tableView(_ itemTableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        items.remove(at: indexPath.row)
+        itemTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+    
+    
+    
         
     
     var receivedData:String = ""
@@ -54,6 +57,11 @@ class ItemListVC: UIViewController, UITableViewDataSource {
     
     
     @IBOutlet weak var itemTableView: UITableView!
+    
+    
+    
+//    self.itemTableView
+    
     
     
     @IBAction func addItem(_ sender: Any) {
@@ -94,8 +102,13 @@ class ItemListVC: UIViewController, UITableViewDataSource {
         self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
         title = "Items"
     //            view.addSubview(table)
-        itemTableView.dataSource = self}
+        itemTableView.delegate = self
+        itemTableView.dataSource = self
+            
     }
+    }
+    
+    
     
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
             

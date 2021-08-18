@@ -110,9 +110,10 @@ class RegisterViewController: UIViewController {
     }
     
     func transitionToHome() {
-        let HomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.HomeViewController) as? HomeViewController
+        let categoryNVC = self.storyboard?.instantiateViewController(identifier: "CategoryNVC") as? CategoryNavigationViewController
         
-        view.window?.rootViewController = HomeViewController
+        view.window?.rootViewController = categoryNVC
+        
         view.window?.makeKeyAndVisible()
     }
 }

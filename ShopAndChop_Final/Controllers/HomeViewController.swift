@@ -54,8 +54,6 @@ extension HomeViewController {
         let cell = CategoryTableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
         let categoryName = categoryNameArray[indexPath.row]
         
-        
-        
         guard let categoryCell = cell as? CategoryCell else {
             return cell
         }
