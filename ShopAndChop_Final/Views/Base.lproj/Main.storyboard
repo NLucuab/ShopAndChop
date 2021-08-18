@@ -168,11 +168,24 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Mg5-b9-uib">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mg5-b9-uib" id="29g-WC-T0D">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKM-6l-rpw">
+                                                    <rect key="frame" x="299" y="5" width="55" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FKM-6l-rpw" firstAttribute="leading" secondItem="29g-WC-T0D" secondAttribute="leading" constant="299" id="Ldw-1C-Sbd"/>
+                                                <constraint firstAttribute="bottom" secondItem="FKM-6l-rpw" secondAttribute="bottom" constant="4.5" id="R8z-hO-U8D"/>
+                                                <constraint firstItem="FKM-6l-rpw" firstAttribute="top" secondItem="29g-WC-T0D" secondAttribute="top" constant="5" id="he8-O7-uon"/>
+                                                <constraint firstAttribute="trailing" secondItem="FKM-6l-rpw" secondAttribute="trailing" constant="20" symbolic="YES" id="qTz-IN-GBN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -205,6 +218,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Item List" id="Qhl-xN-jbF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="yAj-CC-BTB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="8RR-wx-eda">
+                            <connections>
+                                <action selector="editAction:" destination="BLY-eo-eEP" id="JwR-8l-RhO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CategoryLabel" destination="SMh-DD-nYX" id="kX3-Kt-prF"/>
@@ -465,7 +483,7 @@
                             <outlet property="delegate" destination="5nd-db-dbf" id="CzK-Pv-1Dm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vps-Sd-U7j"/>
+                    <navigationItem key="navigationItem" title="Food Categories" id="vps-Sd-U7j"/>
                     <connections>
                         <outlet property="CategoryTableView" destination="FH4-KH-S0K" id="2qU-ZH-fvM"/>
                         <segue destination="BLY-eo-eEP" kind="show" identifier="ToItemListVC" id="cGV-ld-0vj"/>

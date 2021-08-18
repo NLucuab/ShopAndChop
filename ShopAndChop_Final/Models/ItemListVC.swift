@@ -27,7 +27,11 @@ class ItemListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         itemTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
     }
     
-    
+    func tableView(_ itemTableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObjTemp = items[sourceIndexPath.item]
+        items.remove(at: sourceIndexPath.item)
+        items.insert(movedObjTemp, at: destinationIndexPath.item)
+    }
     
         
     
@@ -59,10 +63,13 @@ class ItemListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var itemTableView: UITableView!
     
     
+    @IBOutlet weak var itemCount: UILabel!
     
-//    self.itemTableView
     
-    
+    @IBAction func editAction(_ sender: UIBarButtonItem) {
+        self.itemTableView.isEditing = !self.itemTableView.isEditing
+        sender.title = (self.itemTableView.isEditing) ? "Done" : "Edit"
+    }
     
     @IBAction func addItem(_ sender: Any) {
            let alert = UIAlertController(title: "New Item", message: "Please enter an item.", preferredStyle: .alert)
@@ -95,6 +102,7 @@ class ItemListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func showError(_ message: String) {
         print(message)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         CategoryLabel?.text = receivedData
