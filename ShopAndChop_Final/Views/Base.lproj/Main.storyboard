@@ -173,6 +173,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addItem:" destination="BLY-eo-eEP" eventType="touchUpInside" id="jYo-pl-YL2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xHs-AG-ugj"/>
@@ -193,7 +196,8 @@
                     <navigationItem key="navigationItem" title="Item List" id="Qhl-xN-jbF"/>
                     <connections>
                         <outlet property="CategoryLabel" destination="SMh-DD-nYX" id="kX3-Kt-prF"/>
-                        <outlet property="itemTableView" destination="ORf-qJ-W3Z" id="r7k-Za-3c5"/>
+                        <outlet property="addButton" destination="KmN-JW-9Uf" id="mAn-S7-4r9"/>
+                        <outlet property="itemTableView" destination="ORf-qJ-W3Z" id="8w8-tx-4g2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRo-VB-TlY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

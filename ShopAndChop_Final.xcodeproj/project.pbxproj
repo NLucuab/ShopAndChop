@@ -10,6 +10,7 @@
 		432082D726C08B6300E86F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432082D626C08B6300E86F13 /* GoogleService-Info.plist */; };
 		432082DA26C0EFC000E86F13 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082D926C0EFC000E86F13 /* Utilities.swift */; };
 		432082DC26C1150500E86F13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432082DB26C1150500E86F13 /* Constants.swift */; };
+		4383FFD126CC7C5B0022A3B9 /* itemListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383FFD026CC7C5B0022A3B9 /* itemListTableView.swift */; };
 		4388C3BD26C6F05700001D68 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388C3BC26C6F05700001D68 /* HomeViewController.swift */; };
 		439D71B126C90C650015B669 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D71B026C90C650015B669 /* CategoryCell.swift */; };
 		439D71BB26C96E650015B669 /* ItemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D71BA26C96E650015B669 /* ItemListVC.swift */; };
@@ -32,6 +33,7 @@
 		432082D626C08B6300E86F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		432082D926C0EFC000E86F13 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		432082DB26C1150500E86F13 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4383FFD026CC7C5B0022A3B9 /* itemListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemListTableView.swift; sourceTree = "<group>"; };
 		4388C3BC26C6F05700001D68 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		439D71B026C90C650015B669 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		439D71BA26C96E650015B669 /* ItemListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListVC.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				439D71B026C90C650015B669 /* CategoryCell.swift */,
 				439D71BA26C96E650015B669 /* ItemListVC.swift */,
+				4383FFD026CC7C5B0022A3B9 /* itemListTableView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				43B1779526C065B0006DDAF4 /* AppDelegate.swift in Sources */,
 				439D71BB26C96E650015B669 /* ItemListVC.swift in Sources */,
 				43B1779726C065B0006DDAF4 /* SceneDelegate.swift in Sources */,
+				4383FFD126CC7C5B0022A3B9 /* itemListTableView.swift in Sources */,
 				43E83AFC26C07A50004010F7 /* RegisterViewController.swift in Sources */,
 				432082DC26C1150500E86F13 /* Constants.swift in Sources */,
 				4388C3BD26C6F05700001D68 /* HomeViewController.swift in Sources */,

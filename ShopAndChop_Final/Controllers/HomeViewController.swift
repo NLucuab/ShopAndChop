@@ -13,8 +13,7 @@ class HomeViewController: UITableViewController {
     
     @IBOutlet var CategoryTableView: UITableView!
     
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
